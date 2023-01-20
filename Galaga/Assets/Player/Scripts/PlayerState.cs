@@ -6,26 +6,43 @@ public class PlayerState : MonoBehaviour
 {
     private float playerSpeed;
     private int playerLife;
-    public float PlayerSpeed {
+
+    private bool isDie;
+    private int score;
+    public float PlayerSpeed
+    {
         get; set;
     }
 
-    public float PlayerLife {
+    public bool IsDie
+    {
         get; set;
     }
-    private void Awake() {
-        PlayerSpeed = 10f;
+
+    public float PlayerLife
+    {
+        get; set;
+    }
+
+    public int Scroe
+    {
+        get; set;
+    }
+    private void Awake()
+    {
+        PlayerSpeed = 20f;
         PlayerLife = 3;
+        IsDie = false;
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
