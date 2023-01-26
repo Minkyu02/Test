@@ -54,6 +54,10 @@ public static partial class GFunc
                 searchResult = FindChildobj(searchTarget, objName_);
             }
         }
+        if (searchResult == null || searchResult == default) { }
+        else {
+            return searchResult;
+        }
         return searchResult;
     }
 

@@ -353,6 +353,7 @@
 "Assets/Resources/Scripts/Bullet.cs"
 "Assets/Resources/Scripts/BulletCreate.cs"
 "Assets/Resources/Scripts/GameControl.cs"
+"Assets/Resources/Scripts/Global/GFunc + Develop.cs"
 "Assets/Resources/Scripts/Global/GFunc + obj.cs"
 "Assets/Resources/Scripts/Global/GFunc + Ui.cs"
 "Assets/Resources/Scripts/Global/GFunc.cs"
