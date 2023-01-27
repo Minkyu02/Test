@@ -8,6 +8,7 @@ public class AutoSizeBoxCollider2D : MonoBehaviour
     private BoxCollider2D box = null;
     private RectTransform rectParent = null;
     private RectTransform rect = null;
+    public bool isUseParentSize = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,18 @@ public class AutoSizeBoxCollider2D : MonoBehaviour
         rectParent = transform.parent.gameObject.GetComponentMust<RectTransform>();
         rect = gameObject.GetComponentMust<RectTransform>();
 
-        objsize_.x = rectParent.sizeDelta.x;
-        objsize_.y = rect.sizeDelta.y;
+
+        if (isUseParentSize)
+        {
+            objsize_.x = rectParent.sizeDelta.x;
+            objsize_.y = rect.sizeDelta.y;
+
+        }
+        else
+        {
+            objsize_.x = rect.sizeDelta.x;
+            objsize_.y = rect.sizeDelta.y;
+        }
 
         box.size = objsize_;
 
@@ -26,6 +37,6 @@ public class AutoSizeBoxCollider2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

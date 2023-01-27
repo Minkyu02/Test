@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
         rigi.velocity = Vector2.zero;
         rigi.gravityScale = 0;
         isDead = true;
+        GameManager.instance.OnPlayerDead();
     }
     void Jump()
     {

@@ -92,15 +92,23 @@ public static partial class GFunc
         transform_.Translate(moveVector.x, moveVector.y, 0f);
     }
 
-    public static Vector2 GetRectSizeDelta(this GameObject obj_) {
+    public static Vector2 GetRectSizeDelta(this GameObject obj_)
+    {
         return obj_.GetComponentMust<RectTransform>().sizeDelta;
     }
 
     // 오브젝트의 로컬 포지션을 변경하는 함수
 
-    public static void SetLocalPos(this GameObject obj_, float x, float y, float z) {
-        obj_.transform.localPosition = new Vector3(x,y,z);
+    public static void SetLocalPos(this GameObject obj_, float x, float y, float z)
+    {
+        obj_.transform.localPosition = new Vector3(x, y, z);
     }
+
+    public static void AddLocalPos(this GameObject obj_, float x, float y, float z)
+    {
+        obj_.transform.localPosition = obj_.transform.localPosition + new Vector3(x, y, z);
+    }
+
 
 
 }

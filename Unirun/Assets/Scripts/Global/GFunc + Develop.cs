@@ -21,6 +21,13 @@ public static partial class GFunc // static한개당 4바이트 할당 -> static
         Debug.Log(message, context);
 #endif
     }
+    [System.Diagnostics.Conditional("DEBUG_MODE")]
+    public static void LogWarning(object message)
+    {
+#if DEBUG_MODE
+        Debug.LogWarning(message);
+#endif
+    }
     #endregion
 
 
@@ -39,6 +46,7 @@ public static partial class GFunc // static한개당 4바이트 할당 -> static
         Debug.Assert(condition, message);
 #endif
     }
+
     #endregion
 
     #region  Vaild Func

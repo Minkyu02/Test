@@ -6,7 +6,7 @@ using TMPro;
 
 public static partial class GFunc
 {
-    public static void SetTmpText(GameObject obj_, string text_)
+    public static void SetTmpText(this GameObject obj_, string text_)
     {
         TMP_Text tmpText = obj_.GetComponent<TMP_Text>();
         if (tmpText == null || tmpText == default(TMP_Text))
